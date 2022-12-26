@@ -1,40 +1,39 @@
-<html>
-<head>
-  <style>
-    body {
-      background-color: #333; /* dark gray background color */
-    }
-    .tile {
-      width: 100px;
-      height: 100px;
-      background-color: #999; /* gray tile color */
-      position: absolute;
-      animation: move 10s linear infinite;
-    }
-    /* keyframe animation to move the tiles */
-    @keyframes move {
-      0% {
-        top: 0;
-        left: 0;
-      }
-      100% {
-        top: calc(100% - 100px);
-        left: calc(100% - 100px);
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-  <div class="tile"></div>
-</body>
-</html>
+<style>
+  body {
+    background-color: #333333;
+  }
 
+  .checker {
+    background-color: #cccccc;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+  }
+
+  .checker-container {
+    width: 100%;
+    height: 100%;
+    animation: move-checkers 50s linear infinite;
+  }
+
+  @keyframes move-checkers {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50px);
+    }
+  }
+</style>
+
+<div class="checker-container">
+  <div class="checker"></div>
+  <div class="checker"></div>
+  <div class="checker"></div>
+  <div class="checker"></div>
+  <div class="checker"></div>
+  <div class="checker"></div>
+  <div class="checker"></div>
+  <div class="checker"></div>
+
+</div>
