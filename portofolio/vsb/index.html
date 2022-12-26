@@ -1,1 +1,40 @@
-Vsb portofolio
+<html>
+<head>
+  <style>
+    body {
+      background-color: #333; /* dark gray background color */
+    }
+    .tile {
+      width: 100px;
+      height: 100px;
+      background-color: #999; /* gray tile color */
+      position: absolute;
+      animation: move 10s linear infinite;
+    }
+    /* keyframe animation to move the tiles */
+    @keyframes move {
+      0% {
+        top: 0;
+        left: 0;
+      }
+      100% {
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+</body>
+</html>
+
