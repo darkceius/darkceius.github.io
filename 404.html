@@ -1,55 +1,28 @@
 <html>
-<head>
-  <style>
-    #bouncingText {
-      font-size: 72px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  </style>
-</head>
-<body style="background-color: black;">
-  <div id="bouncingText">404</div>
+  <head>
+    <style>
 
-  <script>
-    const bouncingText = document.getElementById("bouncingText");
-    let top = 50;
-    let left = 50;
-    let directionTop = "up";
-    let directionLeft = "left";
-    const step = 2;
-    const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-
-    setInterval(() => {
-      if (directionTop === "up") {
-        top -= step;
-      } else {
-        top += step;
-      }
-      if (top <= 0) {
-        directionTop = "down";
-      } else if (top >= 100) {
-        directionTop = "up";
+      body {
+        background: radial-gradient(circle at center, transparent, black);
+        background-color: rgb(24, 24, 24);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        overflow: hidden;
       }
 
-      if (directionLeft === "left") {
-        left -= step;
-      } else {
-        left += step;
+      h1 {
+        color: white;
+        font-family: monospace;
+        font-size: 3vw;
+        opacity: 0.9;
       }
-      if (left <= 0) {
-        directionLeft = "right";
-      } else if (left >= 100) {
-        directionLeft = "left";
-      }
-
-      bouncingText.style.top = `${top}%`;
-      bouncingText.style.left = `${left}%`;
-      bouncingText.style.color = colors[Math.floor(Math.random() * colors.length)];
-    }, 16);
-  </script>
-</body>
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>404 📸</h1>
+    </div>
+  </body>
 </html>
-
