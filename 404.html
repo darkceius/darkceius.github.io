@@ -2,7 +2,6 @@
 <head>
   <style>
     #bouncingText {
-      color: red;
       font-size: 72px;
       position: absolute;
       top: 50%;
@@ -11,7 +10,7 @@
     }
   </style>
 </head>
-<body>
+<body style="background-color: black;">
   <div id="bouncingText">404</div>
 
   <script>
@@ -21,6 +20,7 @@
     let directionTop = "up";
     let directionLeft = "left";
     const step = 2;
+    const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
     setInterval(() => {
       if (directionTop === "up") {
@@ -47,7 +47,9 @@
 
       bouncingText.style.top = `${top}%`;
       bouncingText.style.left = `${left}%`;
+      bouncingText.style.color = colors[Math.floor(Math.random() * colors.length)];
     }, 16);
   </script>
 </body>
 </html>
+
